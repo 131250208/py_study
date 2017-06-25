@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//crawl/__init__.py=utf-8
+encoding//crawl/crack_geetest.py=utf-8
+encoding//crawl/crawl_baidu.py=utf-8
+encoding//crawl/crawl_music_163.py=utf-8
+encoding//crawl/crawl_qiushibaike.py=utf-8
+encoding//crawl/crawl_weibo.py=utf-8
+encoding//weibo/__init__.py=utf-8
+encoding//weibo/snspy.py=utf-8
+encoding//weibo/upload_driver.py=utf-8
+encoding//weibo/upload_sdk.py=utf-8
+encoding//weibo/upload_url_text.py=utf-8
+encoding//weibo/weibo_transport.py=utf-8
+encoding/<project>=UTF-8
