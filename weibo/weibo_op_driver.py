@@ -8,6 +8,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
 import os
+import weibo_api
 
 class WBoperator:
 #     driver = webdriver.PhantomJS(service_args=['--remote-debugger-port=9001'])# chrome浏览器驱动
@@ -47,12 +48,13 @@ class WBoperator:
                 else:
                     print u'输入的验证码不正确'
     
-    #打开微博首页进行登录的过程
+    # 打开微博首页进行登录的过程
     def login(self,account,password):
         
         url='http://weibo.com/'
         self.driver.get(url)
-        #输入账号密码并登录
+        
+        # 输入账号密码并登录
         loginname=self.wait.until(lambda x:x.find_element_by_id('loginname'))
         loginname.send_keys(account)
         self.driver.find_element_by_css_selector('input[type="password"]').send_keys(password)
@@ -60,10 +62,14 @@ class WBoperator:
         bt_logoin=self.driver.find_element_by_class_name('login_btn')
         bt_logoin.click()
          
-        #如果存在验证码，则进入手动输入验证码过程
+        # 如果存在验证码，则进入手动输入验证码过程
         if self.isVerifyCodeExist():
             self.inputVerifyCode()  
-            
+        
+        # 登录成功以后读取用户昵称，调用api获取用户id
+        username=self.driver.find_element_by_xpath('//a[@class="gn_name"]/em[2]').get_attribute('innerHTML')
+        self.uid_login=weibo_api.getID(username)
+        print self.uid_login
     # 上传文字
     def upload_txt(self,text):
         input_w=self.driver.find_element_by_xpath('//div[@node-type="textElDiv"]/textarea[@class="W_input"]')
@@ -112,10 +118,10 @@ class WBoperator:
         sleep(1)
         for i in range(num):
             # 找到最新一条微博的下拉选项按钮
-            last_weibo=self.driver.find_element_by_xpath('//div[contains(@id,"Pl_Official_MyProfileFeed")]/div[@node-type="feed_list"]/div[2]')
-            last_weibo.find_element_by_xpath('//a[@action-type="fl_menu"]').click()
-            last_weibo.find_element_by_xpath('//a[@action-type="feed_list_delete"]').click()
-            last_weibo.find_element_by_xpath('//a[@action-type="ok"]').click()
+#             last_weibo=self.driver.find_element_by_xpath('//div[contains(@id,"Pl_Official_MyProfileFeed")]/div[@node-type="feed_list"]/div[2]')
+            self.driver.find_element_by_xpath('//a[@action-type="fl_menu"]').click()
+            self.driver.find_element_by_xpath('//a[@action-type="feed_list_delete"]').click()
+            self.driver.find_element_by_xpath('//a[@action-type="ok"]').click()
             sleep(1)
     
     # 关注用户
@@ -123,16 +129,33 @@ class WBoperator:
         self.driver.get('http://weibo.com/u/'+uid)
         focuslink=self.wait.until(lambda x:x.find_element_by_xpath('//div[@node-type="focusLink"]/a'))
         focuslink.click()
-        pass
     
-    # 批量关注（参数可能包含已关注用户）
-    def follow_uidlist(self,uid_list):
-        pass
+    # 批量关注（参数可能包含已关注用户和自身id）
+    def follow_uidlist(self,uid_list):# 参数为uid的一个list
+        for uid in uid_list:
+            if uid==self.uid_login:# 如果是自己的id，跳过
+                continue
+            
+            str_frship=weibo_api.getFriendship(self.uid_login, uid)
+            if str_frship=='1:0' or str_frship=='1:1' :# 如果是已关注或者互相关注的用户，则跳过
+                continue
+            
+            # 是未关注用户，则关注
+            self.follow(uid)
     
+    # 取消关注
+    def unfollow(self,uid):
+        self.driver.get('http://weibo.com/u/'+uid)
+        focuslink=self.wait.until(lambda x:x.find_element_by_xpath('//div[@node-type="focusLink"]/a'))
+        focuslink.click()
+        sleep(0.5)
+        cancel_attan=self.wait.until(lambda x:x.find_element_by_xpath('//a[@suda-data="key=tblog_profile_v6&value=cancel_atten"]'))
+        cancel_attan.click()
+        pass
 operator=WBoperator()
 operator.login('15850782585', 'Weibo6981228.')
 #  15151892433,ZSMuYu104104
-operator.follow('2297279871')
+
 # path_list=[]
 # for i in range(9):
 #     path_list.append('"C:\\Users\\15850\\Documents\\GitHub\\MyWorkspace\\py_study\\img\\'+str(i+1)+'.jpg"')

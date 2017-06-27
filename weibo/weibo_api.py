@@ -29,6 +29,8 @@ def getAccess_token(code):
     
 
 #print getAccess_token('2acaac487ee3a9a9548e464a288d0f49')# 2.00fk4vmGP_WNeE9564959dfbsrJuvD
+
+# 获取两个用户之间的关系
 def getFriendship(uid_source,uid_target):
     url='https://api.weibo.com/2/friendships/show.json'
     param={'access_token':access_token,
@@ -49,6 +51,26 @@ def getFriendship(uid_source,uid_target):
     elif following and followed_by:
         return '1:1'# 互相关注
     
+# 通过用户昵称查id
+def getID(username):# 返回的是str类型
+    url='https://api.weibo.com/2/users/show.json'
+    param={'access_token':access_token,
+           'screen_name':username}
+    response=requests.get(url,param)
+    print response.text
+    jsob=json.loads(response.text)
+    return jsob['idstr']
+
+# 通过id找用户昵称
+def getUserName(uid):
+    url='https://api.weibo.com/2/users/show.json'
+    param={'access_token':access_token,
+           'uid':uid}
+    response=requests.get(url,param)
+    print response.text
+    jsob=json.loads(response.text)
+    return jsob['screen_name']
+
 # url_upload='https://api.weibo.com/2/statuses/update.json'
 # text=u'测试文本1'
 # # text_encoded=urllib.quote(text)
