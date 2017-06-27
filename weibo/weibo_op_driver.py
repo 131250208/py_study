@@ -103,7 +103,11 @@ class WBoperator:
         bt_uploadimg=WebDriverWait(self.driver,10).until(lambda x:x.find_element_by_xpath('//li[@node-type="uploadBtn"]/div/object[contains(@id,"swf_upbtn")]'))
         for i in range(len_imgs-1):# 将剩余图片上传 
             bt_uploadimg.click()
-            self.upload_img_script(1, 2,img_path_list[i+1])
+            
+            time_af=2
+            if i==len_imgs-2:
+                time_af=3.5
+            self.upload_img_script(1, time_af,img_path_list[i+1])
     
     # 发布
     def send(self):
@@ -152,10 +156,11 @@ class WBoperator:
         cancel_attan=self.wait.until(lambda x:x.find_element_by_xpath('//a[@suda-data="key=tblog_profile_v6&value=cancel_atten"]'))
         cancel_attan.click()
         pass
-operator=WBoperator()
-operator.login('15850782585', 'Weibo6981228.')
-#  15151892433,ZSMuYu104104
 
+#  15151892433,ZSMuYu104104
+# operator=WBoperator()
+# operator.login('15850782585', 'Weibo6981228.')
+# operator.delete(2)
 # path_list=[]
 # for i in range(9):
 #     path_list.append('"C:\\Users\\15850\\Documents\\GitHub\\MyWorkspace\\py_study\\img\\'+str(i+1)+'.jpg"')
