@@ -9,14 +9,20 @@ from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
 import os
 
-class Uploader:
-    driver = webdriver.Chrome(executable_path='../drivers/chromedriver.exe')# chrome浏览器驱动
+class WBoperator:
+#     driver = webdriver.PhantomJS(service_args=['--remote-debugger-port=9001'])# chrome浏览器驱动
+    driver = webdriver.Chrome()# chrome浏览器驱动
+    driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
+    driver.set_window_size(1920, 1080)# 用phantomjs必须有这行
+    wait=WebDriverWait(driver,10)
+    uid_login=''
+    
     # 根据验证框的存在与否判断是否要输入验证码
     def isVerifyCodeExist(self):
-        try:
+        try:# 如果成功找到验证码输入框返回true
             self.driver.find_element_by_css_selector('input[name="verifycode"]')
             return True
-        except:
+        except:# 如果异常返回false
             return False
     
     # 输入验证码部分，如果无需输入则直接返回，否则手动输入成功后返回        
@@ -26,6 +32,8 @@ class Uploader:
         bt_logoin=self.driver.find_element_by_class_name('login_btn')# 登录按钮
         while self.isVerifyCodeExist():
             print u'请输入验证码……(输入"c"切换验证码图片)'
+            # 截屏以便手动输入验证码
+            self.driver.save_screenshot('../screenshots/verifycode.jpg')
             verifycode=raw_input()
             if verifycode=='c':
                 bt_change.click()
@@ -41,16 +49,17 @@ class Uploader:
     
     #打开微博首页进行登录的过程
     def login(self,account,password):
-        self.driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
+        
         url='http://weibo.com/'
         self.driver.get(url)
         #输入账号密码并登录
-        WebDriverWait(self.driver,10).until(lambda x:x.find_element_by_xpath('//input[@id="loginname"]')).send_keys(account)
+        loginname=self.wait.until(lambda x:x.find_element_by_id('loginname'))
+        loginname.send_keys(account)
         self.driver.find_element_by_css_selector('input[type="password"]').send_keys(password)
-        
+         
         bt_logoin=self.driver.find_element_by_class_name('login_btn')
         bt_logoin.click()
-        
+         
         #如果存在验证码，则进入手动输入验证码过程
         if self.isVerifyCodeExist():
             self.inputVerifyCode()  
@@ -62,19 +71,21 @@ class Uploader:
         sleep(1)
     
     #运行上传图片脚步
-    def upload_img_script(self,time_bef,time_after,path):# path 需要前后带引号
+    def upload_img_script(self,time_bef,time_after,path):# path参数需要前后带双引号
         sleep(time_bef)# 等待弹窗时间
         os.system('C:/Users/15850/Documents/GitHub/MyWorkspace/py_study/script/upload.exe '+path)
         sleep(time_after)# 等待图片加载时间
+        
     # 上传文字和单图
     def upload_txt_img(self,text,img_path):
         self.upload_txt(text)# 将文字上传
-        img=self.driver.find_element_by_css_selector('a[action-type="multiimage"]')
-        img.click()
-        sleep(1)
+        img=self.driver.find_element_by_css_selector('a[action-type="multiimage"]')# 图片按钮
+        img.click()# 点击图片按钮
+        sleep(1)# 等待加载其他按钮
         
+        #单图/多图按钮，即上传图片按钮
         bt_uploadimg=WebDriverWait(self.driver,10).until(lambda x:x.find_element_by_xpath('//object[contains(@id,"swf_upbtn")]'))
-        bt_uploadimg.click()
+        bt_uploadimg.click()# 点击上传按钮
         
         self.upload_img_script(1,2,img_path)
     
@@ -82,9 +93,9 @@ class Uploader:
     def upload_txt_multiImg(self,text,img_path_list):
         self.upload_txt_img(text,img_path_list[0])# 将文字和第一张图片上传
        
-        len_imgs=len(img_path_list)    
+        len_imgs=len(img_path_list)# 图片地址list的长度    
         bt_uploadimg=WebDriverWait(self.driver,10).until(lambda x:x.find_element_by_xpath('//li[@node-type="uploadBtn"]/div/object[contains(@id,"swf_upbtn")]'))
-        for i in range(len_imgs-1):# 将剩余图片 
+        for i in range(len_imgs-1):# 将剩余图片上传 
             bt_uploadimg.click()
             self.upload_img_script(1, 2,img_path_list[i+1])
     
@@ -93,8 +104,35 @@ class Uploader:
         self.driver.find_element_by_class_name('W_btn_a').click()
         sleep(4)# 等待发送成功字样消失
 
-
-
+    
+    # 批量删除微博
+    def delete(self,num):
+        # 进入到微博列表页面
+        self.driver.find_element_by_xpath('//strong[@node-type="weibo"]').click()
+        sleep(1)
+        for i in range(num):
+            # 找到最新一条微博的下拉选项按钮
+            last_weibo=self.driver.find_element_by_xpath('//div[contains(@id,"Pl_Official_MyProfileFeed")]/div[@node-type="feed_list"]/div[2]')
+            last_weibo.find_element_by_xpath('//a[@action-type="fl_menu"]').click()
+            last_weibo.find_element_by_xpath('//a[@action-type="feed_list_delete"]').click()
+            last_weibo.find_element_by_xpath('//a[@action-type="ok"]').click()
+            sleep(1)
+    
+    # 关注用户
+    def follow(self,uid):
+        self.driver.get('http://weibo.com/u/'+uid)
+        focuslink=self.wait.until(lambda x:x.find_element_by_xpath('//div[@node-type="focusLink"]/a'))
+        focuslink.click()
+        pass
+    
+    # 批量关注（参数可能包含已关注用户）
+    def follow_uidlist(self,uid_list):
+        pass
+    
+operator=WBoperator()
+operator.login('15850782585', 'Weibo6981228.')
+#  15151892433,ZSMuYu104104
+operator.follow('2297279871')
 # path_list=[]
 # for i in range(9):
 #     path_list.append('"C:\\Users\\15850\\Documents\\GitHub\\MyWorkspace\\py_study\\img\\'+str(i+1)+'.jpg"')
