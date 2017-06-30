@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 '''
 Created on 2017年6月25日
-
+此类实现了微博搬家，即批量发微博和关注
 @author: wycheng
 '''
 from crawl import crawl_weibo
@@ -80,4 +80,4 @@ def start_trans(start_i,start_j):# 两个参数分别为微博坐标，以便发
 
 
 # 上次断点 10,4
-start_trans(10, 4)                
+start_trans(35, 8)                

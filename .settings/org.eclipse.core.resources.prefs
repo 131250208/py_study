@@ -7,7 +7,6 @@ encoding//crawl/crawl_qiushibaike.py=utf-8
 encoding//crawl/crawl_weibo.py=utf-8
 encoding//weibo/__init__.py=utf-8
 encoding//weibo/weibo_api.py=utf-8
-encoding//weibo/weibo_follow.py=utf-8
 encoding//weibo/weibo_op_driver.py=utf-8
 encoding//weibo/weibo_transport.py=utf-8
 encoding/<project>=UTF-8

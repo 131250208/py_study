@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 '''
 Created on 2017年6月19日
-
+此类用来封装微博开放平台的api
 @author: wycheng
 '''
 
@@ -23,7 +23,7 @@ def getAccess_token(code):
            'code':code
            }
     response=requests.post(url,param)
-    print response.text
+    print 'weibo_api.getAccess_token:'+response.text
     jsob=json.loads(response.text)
     return jsob['access_token']
     
@@ -37,19 +37,23 @@ def getFriendship(uid_source,uid_target):
            'source_id':uid_source,
            'target_id':uid_target}
     response=requests.get(url,param)
-    print response.text
+    print 'weibo_api.getFriendship:'+response.text
     jsob=json.loads(response.text)
-    followed_by=jsob['source']['followed_by']
-    following=jsob['source']['following']
     
-    if not following and not followed_by:
-        return '0:0'# 互相不关注
-    elif following and not followed_by:
-        return '1:0'# 已关注，未被关注
-    elif not following and followed_by:
-        return '0:1'# 未关注，已被关注
-    elif following and followed_by:
-        return '1:1'# 互相关注
+    if 'error' in jsob:
+        return 'api error'
+    elif 'source' in jsob:
+        followed_by=jsob['source']['followed_by']
+        following=jsob['source']['following']
+        
+        if not following and not followed_by:
+            return '0:0'# 互相不关注
+        elif following and not followed_by:
+            return '1:0'# 已关注，未被关注
+        elif not following and followed_by:
+            return '0:1'# 未关注，已被关注
+        elif following and followed_by:
+            return '1:1'# 互相关注
     
 # 通过用户昵称查id
 def getID(username):# 返回的是str类型
@@ -57,7 +61,7 @@ def getID(username):# 返回的是str类型
     param={'access_token':access_token,
            'screen_name':username}
     response=requests.get(url,param)
-    print response.text
+    print 'weibo_api.getID:'+response.text
     jsob=json.loads(response.text)
     return jsob['idstr']
 
@@ -67,7 +71,7 @@ def getUserName(uid):
     param={'access_token':access_token,
            'uid':uid}
     response=requests.get(url,param)
-    print response.text
+    print 'weibo_api.getUserName:'+response.text
     jsob=json.loads(response.text)
     return jsob['screen_name']
 
