@@ -44,9 +44,9 @@ def getHref_all():
 # getHref_all()
 # print count_href
 
-driver = webdriver.PhantomJS()# chrome浏览器驱动
-driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
-driver.set_window_size(1920, 1080)# 用phantomjs必须有这行
-wait = WebDriverWait(driver,10)
+# driver = webdriver.PhantomJS(service_args=['--remote-debugger-port=9001'])# chrome浏览器驱动
+# driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
+# driver.set_window_size(1920, 1080)# 用phantomjs必须有这行
+# wait = WebDriverWait(driver,10)
 
 driver.get('https://movie.douban.com/annual2016/?source=navigation#0')

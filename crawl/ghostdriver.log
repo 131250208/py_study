@@ -1,39 +1,7 @@
-[INFO  - 2017-07-16T14:50:28.192Z] GhostDriver - Main - running on port 62404
-[INFO  - 2017-07-16T14:50:31.568Z] Session [1d9b8880-6a36-11e7-bb8f-1565c113e864] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
-[INFO  - 2017-07-16T14:50:31.568Z] Session [1d9b8880-6a36-11e7-bb8f-1565c113e864] - page.customHeaders:  - {}
-[INFO  - 2017-07-16T14:50:31.568Z] Session [1d9b8880-6a36-11e7-bb8f-1565c113e864] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
-[INFO  - 2017-07-16T14:50:31.568Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 1d9b8880-6a36-11e7-bb8f-1565c113e864
-[ERROR - 2017-07-16T14:50:32.694Z] Session [1d9b8880-6a36-11e7-bb8f-1565c113e864] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 'e.pause()')
-
-  phantomjs://platform/console++.js:263 in error
-[ERROR - 2017-07-16T14:50:32.695Z] Session [1d9b8880-6a36-11e7-bb8f-1565c113e864] - page.onError - stack:
-  load (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:5)
-  value (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:5)
-  notifyAll (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:3)
-  close (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:11)
-  closeAll (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  perform (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  perform (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  perform (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:1)
-  A (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:1)
-  (anonymous function) (:0)
-  closeAll (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  perform (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  batchedUpdates (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:11)
-  s (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:1)
-  r (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  enqueueSetState (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  setState (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:3)
-  handleChange (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:13)
-  (anonymous function) (:0)
-  c (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:5)
-  (anonymous function) (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:18)
-  (anonymous function) (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:18)
-  dispatch (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:18)
-  (anonymous function) (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:5)
-  callback (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  (anonymous function) (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-  emit (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:18)
-  onreadystatechange (https://img3.doubanio.com/f/ithil/505e7681ecde96b940bd1bc3ddbdf2116f07821e/gen/ithil.bundle.js:2)
-
-  phantomjs://platform/console++.js:263 in error
+[INFO  - 2017-07-17T02:29:39.338Z] GhostDriver - Main - running on port 33159
+[INFO  - 2017-07-17T02:29:39.724Z] Session [c89e1a20-6a97-11e7-adb0-5d944c1dc5ac] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1"}
+[INFO  - 2017-07-17T02:29:39.725Z] Session [c89e1a20-6a97-11e7-adb0-5d944c1dc5ac] - page.customHeaders:  - {}
+[INFO  - 2017-07-17T02:29:39.725Z] Session [c89e1a20-6a97-11e7-adb0-5d944c1dc5ac] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"linux-unknown-64bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2017-07-17T02:29:39.725Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: c89e1a20-6a97-11e7-adb0-5d944c1dc5ac
+PhantomJS has crashed. Please read the bug reporting guide at
+<http://phantomjs.org/bug-reporting.html> and file a bug report.
