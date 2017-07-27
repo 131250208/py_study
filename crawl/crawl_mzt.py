@@ -6,7 +6,6 @@ Created on 2017年6月30日
 '''
 from kit_mine.request_mine import requests_mine
 from bs4 import BeautifulSoup
-import time
 
 class CrawlMZT:
     
