@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af983d36-17ba-4d4c-ac38-841e64e718ad" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/crawl/crawl_wangpan007.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/crawl/resrc_saver.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/followed_2017_06_28.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/压缩包/RAR.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/压缩包/ZIP.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/DOC.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/DOCX.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/PDF.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/TXT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/种子/TORRENT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/视频/RMVB.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/音乐/FLAC.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/音乐/MP3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/wechatrobot/robottest.py" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/wechatrobot/__init__.py" afterPath="$PROJECT_DIR$/kit_mine/demo_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baiduyun/test.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/视频/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/音乐/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/压缩包/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/文档/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/种子/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/视频/资源种类" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/音乐/资源种类" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/压缩包/资源种类" afterPath="$PROJECT_DIR$/baiduyun/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/资源种类" afterPath="$PROJECT_DIR$/baiduyun/baiduyun_operator.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/种子/资源种类" afterPath="$PROJECT_DIR$/baiduyun/bdy_transfer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/py_study.iml" afterPath="$PROJECT_DIR$/.idea/py_study.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl/crawl_mzt.py" afterPath="$PROJECT_DIR$/crawl/crawl_mzt.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kit_mine/demo_test.py" afterPath="$PROJECT_DIR$/kit_mine/demo_test.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,10 +26,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/py_study$robottest.coverage" NAME="robottest Coverage Results" MODIFIED="1500787669915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatrobot" />
-    <SUITE FILE_PATH="coverage/py_study$crawl_wangpan007.coverage" NAME="crawl_wangpan007 Coverage Results" MODIFIED="1500733606881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
-    <SUITE FILE_PATH="coverage/py_study$Unittests_in_test_py.coverage" NAME="Unittests in test.py Coverage Results" MODIFIED="1500783985149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatrobot" />
     <SUITE FILE_PATH="coverage/py_study$demo_test.coverage" NAME="demo_test Coverage Results" MODIFIED="1500790860328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatrobot" />
+    <SUITE FILE_PATH="coverage/py_study$bdy_transfer.coverage" NAME="bdy_transfer Coverage Results" MODIFIED="1501341856302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baiduyun" />
+    <SUITE FILE_PATH="coverage/py_study$Unittests_in_test_py.coverage" NAME="Unittests in test.py Coverage Results" MODIFIED="1500783985149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatrobot" />
+    <SUITE FILE_PATH="coverage/py_study$robottest.coverage" NAME="robottest Coverage Results" MODIFIED="1500787669915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/wechatrobot" />
+    <SUITE FILE_PATH="coverage/py_study$baiduyun_operator.coverage" NAME="baiduyun_operator Coverage Results" MODIFIED="1501291571056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baiduyun" />
+    <SUITE FILE_PATH="coverage/py_study$crawl_wangpan007.coverage" NAME="crawl_wangpan007 Coverage Results" MODIFIED="1500733606881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/crawl" />
     <SUITE FILE_PATH="coverage/py_study$demo_test__1_.coverage" NAME="demo_test (1) Coverage Results" MODIFIED="1500882393947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/kit_mine" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -44,9 +43,33 @@
       <file leaf-file-name="demo_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kit_mine/demo_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baiduyun_operator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/baiduyun/baiduyun_operator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="11" column="66" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
+              <folding>
+                <element signature="e#23#53#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bdy_transfer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/baiduyun/bdy_transfer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1528">
+              <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+              <folding>
+                <element signature="e#23#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -54,7 +77,7 @@
       <file leaf-file-name="crawl_mzt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
+            <state relative-caret-position="736">
               <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
               <folding>
                 <element signature="e#71#118#0" expanded="true" />
@@ -63,21 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="crawl_qiushibaike.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/crawl/crawl_qiushibaike.py">
+      <file leaf-file-name="webelement.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="crawl_baidu.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/crawl/crawl_baidu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="38" />
+            <state relative-caret-position="-809">
+              <caret line="487" column="48" lean-forward="true" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -88,6 +101,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -95,12 +109,16 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>print (.*)</find>
+      <find>driver</find>
+      <find>data-button-id</find>
     </findStrings>
     <replaceStrings>
       <replace>file.write($1)</replace>
+      <replace>self.driver</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -114,6 +132,11 @@
         <option value="$PROJECT_DIR$/wechatrobot/demo_test.py" />
         <option value="$PROJECT_DIR$/kit_mine/test.py" />
         <option value="$PROJECT_DIR$/crawl/crawl_mzt.py" />
+        <option value="$PROJECT_DIR$/kit_mine/demo_test.py" />
+        <option value="$PROJECT_DIR$/weibo/weibo_op_driver.py" />
+        <option value="$PROJECT_DIR$/baiduyun/baiduyun_operator.py" />
+        <option value="$PROJECT_DIR$/baiduyun/test.js" />
+        <option value="$PROJECT_DIR$/baiduyun/bdy_transfer.py" />
       </list>
     </option>
   </component>
@@ -124,10 +147,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="205" />
-    <option name="y" value="80" />
-    <option name="width" value="1576" />
-    <option name="height" value="1000" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -147,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -211,19 +235,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drivers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="crawl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="py_study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="baiduyun" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_f02737a78695063deace08e96d5042710d3e32db/cmd/git.exe" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -238,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.demo_test (1)">
+  <component name="RunManager" selected="Python.bdy_transfer">
     <configuration default="false" name="robottest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -256,41 +321,6 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="crawl_wangpan007" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/crawl" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="py_study" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../src_crawler_robot/businese/crawl_wangpan007.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in demo_test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/wechatrobot" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="py_study" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/../src_crawler_robot/presentation/demo_test.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="false" name="demo_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -326,6 +356,44 @@
       <module name="py_study" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/kit_mine/demo_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="baiduyun_operator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baiduyun" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_study" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baiduyun/baiduyun_operator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="bdy_transfer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/baiduyun" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="py_study" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baiduyun/bdy_transfer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -481,18 +549,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.robottest" />
-      <item index="1" class="java.lang.String" itemvalue="Python.crawl_wangpan007" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in demo_test.py" />
-      <item index="3" class="java.lang.String" itemvalue="Python.demo_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.demo_test (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.demo_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.demo_test (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Python.baiduyun_operator" />
+      <item index="4" class="java.lang.String" itemvalue="Python.bdy_transfer" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.demo_test (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.demo_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.robottest" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in demo_test.py" />
-        <item index="4" class="java.lang.String" itemvalue="Python.crawl_wangpan007" />
+        <item index="0" class="java.lang.String" itemvalue="Python.bdy_transfer" />
+        <item index="1" class="java.lang.String" itemvalue="Python.baiduyun_operator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.demo_test (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.demo_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.robottest" />
       </list>
     </recent_temporary>
   </component>
@@ -527,20 +595,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="205" y="80" width="1576" height="1000" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29934642" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33867276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36553237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993135" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39846322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -558,18 +626,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/kit_mine/demo_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="860">
@@ -584,7 +646,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -592,7 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="940">
           <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -751,43 +811,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/crawl_douban.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-142">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weibo/weibo_transport.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-180">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/businese/crawl_wangpan007.py" />
-    <entry file="file://$PROJECT_DIR$/weibo/weibo_op_driver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="16" column="78" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/businese/resrc_saver.py" />
-    <entry file="file:///usr/lib/python2.7/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3">
-          <caret line="172" column="4" lean-forward="false" selection-start-line="172" selection-start-column="4" selection-end-line="172" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1247972723/__builtin__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="2057" column="8" lean-forward="false" selection-start-line="2057" selection-start-column="8" selection-end-line="2057" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/lib/python2.7/re.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1247972723/__builtin__.py" />
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/presentation/demo_test.py" />
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/presentation/robottest.py" />
     <entry file="file://$PROJECT_DIR$/kit_mine/request_mine.py">
@@ -797,21 +824,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kit_mine/demo_test.py">
+    <entry file="file://$PROJECT_DIR$/crawl/crawl_baidu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
-          <folding>
-            <element signature="e#71#118#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="298">
+          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -819,15 +835,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/errorhandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="193" column="0" lean-forward="false" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/phantomjs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weibo/weibo_op_driver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-648">
+          <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/crawl/crawl_baidu.py">
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/command.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="38" />
+        <state relative-caret-position="265">
+          <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weibo/weibo_transport.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-809">
+          <caret line="487" column="48" lean-forward="true" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kit_mine/demo_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduyun/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="100" lean-forward="false" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl/crawl_douban.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+          <folding>
+            <element signature="e#71#118#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduyun/baiduyun_operator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="66" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
+          <folding>
+            <element signature="e#23#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduyun/bdy_transfer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1528">
+          <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
