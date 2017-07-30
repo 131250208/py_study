@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af983d36-17ba-4d4c-ac38-841e64e718ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/baiduyun/test.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/视频/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/音乐/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/压缩包/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/文档/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/种子/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/视频/资源种类" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集0/音乐/资源种类" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/压缩包/资源种类" afterPath="$PROJECT_DIR$/baiduyun/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/文档/资源种类" afterPath="$PROJECT_DIR$/baiduyun/baiduyun_operator.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/text/欢乐颂_资源链接文档合集/种子/资源种类" afterPath="$PROJECT_DIR$/baiduyun/bdy_transfer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/py_study.iml" afterPath="$PROJECT_DIR$/.idea/py_study.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kit_mine/demo_test.py" afterPath="$PROJECT_DIR$/kit_mine/demo_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baiduyun/geckodriver.log" afterPath="$PROJECT_DIR$/baiduyun/geckodriver.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baiduyun/ghostdriver.log" afterPath="$PROJECT_DIR$/baiduyun/ghostdriver.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kit_mine/request_mine.py" afterPath="$PROJECT_DIR$/kit_mine/request_mine.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,8 +42,8 @@
       <file leaf-file-name="baiduyun_operator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baiduyun/baiduyun_operator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" column="66" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
+            <state relative-caret-position="230">
+              <caret line="11" column="66" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
               <folding>
                 <element signature="e#23#53#0" expanded="true" />
               </folding>
@@ -62,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bdy_transfer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bdy_transfer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/baiduyun/bdy_transfer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1528">
+            <state relative-caret-position="527">
               <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
@@ -74,10 +63,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="request_mine.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kit_mine/request_mine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="e#71#84#0" expanded="true" />
+                <marker date="1501413824448" expanded="true" signature="180:4925" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="crawl_mzt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
+            <state relative-caret-position="989">
               <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
               <folding>
                 <element signature="e#71#118#0" expanded="true" />
@@ -89,8 +91,8 @@
       <file leaf-file-name="webelement.py" pinned="false" current-in-tab="false">
         <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-809">
-              <caret line="487" column="48" lean-forward="true" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
+            <state relative-caret-position="10994">
+              <caret line="487" column="48" lean-forward="false" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -137,6 +139,7 @@
         <option value="$PROJECT_DIR$/baiduyun/baiduyun_operator.py" />
         <option value="$PROJECT_DIR$/baiduyun/test.js" />
         <option value="$PROJECT_DIR$/baiduyun/bdy_transfer.py" />
+        <option value="$PROJECT_DIR$/kit_mine/request_mine.py" />
       </list>
     </option>
   </component>
@@ -170,6 +173,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -283,11 +287,10 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Local/GitHub/PortableGit_f02737a78695063deace08e96d5042710d3e32db/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FilmFactory" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -598,15 +601,16 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36553237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36553237" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24270834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39846322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -615,7 +619,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -817,13 +820,6 @@
     <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1247972723/__builtin__.py" />
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/presentation/demo_test.py" />
     <entry file="file://$PROJECT_DIR$/../src_crawler_robot/presentation/robottest.py" />
-    <entry file="file://$PROJECT_DIR$/kit_mine/request_mine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/crawl/crawl_baidu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -854,7 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-648">
           <caret line="99" column="8" lean-forward="false" selection-start-line="99" selection-start-column="8" selection-end-line="99" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,7 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
           <caret line="52" column="33" lean-forward="false" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,14 +864,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="76" column="39" lean-forward="true" selection-start-line="76" selection-start-column="39" selection-end-line="76" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-809">
-          <caret line="487" column="48" lean-forward="true" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
+        <state relative-caret-position="10994">
+          <caret line="487" column="48" lean-forward="false" selection-start-line="487" selection-start-column="48" selection-end-line="487" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -894,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="11" column="100" lean-forward="false" selection-start-line="11" selection-start-column="86" selection-end-line="11" selection-end-column="100" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,13 +894,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/crawl/crawl_mzt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
+        <state relative-caret-position="989">
           <caret line="44" column="30" lean-forward="false" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
           <folding>
             <element signature="e#71#118#0" expanded="true" />
@@ -918,8 +909,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/baiduyun/baiduyun_operator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="66" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
+        <state relative-caret-position="230">
+          <caret line="11" column="66" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="11" selection-end-column="66" />
           <folding>
             <element signature="e#23#53#0" expanded="true" />
           </folding>
@@ -928,10 +919,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/baiduyun/bdy_transfer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1528">
+        <state relative-caret-position="527">
           <caret line="87" column="27" lean-forward="false" selection-start-line="87" selection-start-column="27" selection-end-line="87" selection-end-column="27" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kit_mine/request_mine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#71#84#0" expanded="true" />
+            <marker date="1501413824448" expanded="true" signature="180:4925" ph="..." />
           </folding>
         </state>
       </provider>
