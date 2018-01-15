@@ -9,17 +9,21 @@ Created on 2017年6月25日
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 import os
-import weibo_api
 import re
 import time
+import pickle
+import requests
+import json
 
 class WBoperator:
 #     driver = webdriver.PhantomJS(service_args=['--remote-debugger-port=9001'])# chrome浏览器驱动
-    driver = webdriver.Chrome()# chrome浏览器驱动
-    driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
-    driver.set_window_size(1920, 1080)# 用phantomjs必须有这行
-    wait=WebDriverWait(driver,10)
-    uid_login=''# 登录后会赋予登录用户的id值
+    def __init__(self):
+        self.driver = webdriver.Chrome()# chrome浏览器驱动
+        self.driver.implicitly_wait(10)# 设置隐性等待时间，等待页面加载完成才会进行下一步，最多等待10秒
+        self.driver.set_window_size(1920, 1080)# 用phantomjs必须有这行
+        self.wait=WebDriverWait(self.driver,10)
+        self.uid_login=''# 登录后会赋予登录用户的id值
+        pass
     
     # 根据验证框的存在与否判断是否要输入验证码
     def isVerifyCodeExist(self):
@@ -35,21 +39,13 @@ class WBoperator:
         bt_change=self.driver.find_element_by_css_selector('img[action-type="btn_change_verifycode"]')# 验证码图片，点击切换
         bt_logoin=self.driver.find_element_by_class_name('login_btn')# 登录按钮
         while self.isVerifyCodeExist():
-            print u'请输入验证码……(输入"c"切换验证码图片)'
+            print u'请输入验证码……'
             # 截屏以便手动输入验证码
-            self.driver.save_screenshot('../screenshots/verifycode.jpg')
             verifycode=raw_input()
-            if verifycode=='c':
-                bt_change.click()
-            else:
-                input_verifycode.send_keys(verifycode)
-                bt_logoin.click()
-                # 点击完登录以后判断是否成功
-                if self.driver.current_url.split('/')[-1]=='home':
-                    print u'登录成功'
-                    break
-                else:
-                    print u'输入的验证码不正确'
+            if verifycode=='OVER':
+                break
+
+        return self.driver.get_cookies()
     
     # 打开微博首页进行登录的过程
     def login(self,account,password):
@@ -67,23 +63,27 @@ class WBoperator:
          
         # 如果存在验证码，则进入手动输入验证码过程
         if self.isVerifyCodeExist():
-            self.inputVerifyCode()  
-        
+            return self.inputVerifyCode()
+
+        time.sleep(2)
+
+        return self.driver.get_cookies()
         # api调用次数受限，暂时不通过api
 #         # 登录成功以后读取用户昵称，调用api获取用户id
 #         username=self.driver.find_element_by_xpath('//a[@class="gn_name"]/em[2]').get_attribute('innerHTML')
 #         self.uid_login=weibo_api.getID(username)
         
         # 用正则匹配找到登录用户的uid
-        time.sleep(0.5)# 稍等加载
-        scripts=self.driver.find_elements_by_xpath('//head/script[@type="text/javascript"]')
-        str_script=scripts[-1].get_attribute('innerHTML')
-        
-        compile=re.compile('\[\'uid\'\]=\'[0-9]*\'')# 正则匹配的表达式
-        uid_str=re.search(compile, str_script).group()# 匹配结果['uid']='6219737121'
-        uid=uid_str.split('=')[1][1:-1]
-        
-        self.uid_login=uid
+        # time.sleep(0.5)# 稍等加载
+        # scripts=self.driver.find_elements_by_xpath('//head/script')
+        # str_script=scripts[-1].get_attribute('innerHTML')
+        #
+        # compile=re.compile('\[\'uid\'\]=\'[0-9]*\'')# 正则匹配的表达式
+        # print str_script
+        # uid_str=re.search(compile, str_script).group()# 匹配结果['uid']='6219737121'
+        # uid=uid_str.split('=')[1][1:-1]
+        #
+        # self.uid_login=uid
     # 上传文字
     def upload_txt(self,text):
         input_w=self.driver.find_element_by_xpath('//div[@node-type="textElDiv"]/textarea[@class="W_input"]')
@@ -133,14 +133,19 @@ class WBoperator:
     def delete(self,num):
         # 进入到微博列表页面
         self.driver.find_element_by_xpath('//strong[@node-type="weibo"]').click()
-        time.sleep(1)
+        time.sleep(5)
         for i in range(num):
             # 找到最新一条微博的下拉选项按钮
 #             last_weibo=self.driver.find_element_by_xpath('//div[contains(@id,"Pl_Official_MyProfileFeed")]/div[@node-type="feed_list"]/div[2]')
-            self.driver.find_element_by_xpath('//a[@action-type="fl_menu"]').click()
-            self.driver.find_element_by_xpath('//a[@action-type="feed_list_delete"]').click()
-            self.driver.find_element_by_xpath('//a[@action-type="ok"]').click()
-            time.sleep(1)
+            try:
+                self.driver.find_element_by_xpath('//a[@action-type="fl_menu"][1]').click()
+                time.sleep(0.2)
+                self.driver.find_element_by_xpath('//a[@action-type="feed_list_delete"]').click()
+                time.sleep(0.2)
+                self.driver.find_element_by_xpath('//a[@action-type="ok"]').click()
+                time.sleep(1)
+            except:
+                continue
     
     
     # 关注用户
@@ -236,20 +241,60 @@ class WBoperator:
             uid=action_data.split('&')[-3].split('=')[1]# 获取uid的值
             uid_list.append(uid)# 将uid加入到list中
         return uid_list # 返回本页所有的uid
-    
+
+    def login_verification_code(self, phone_num, v_code):
+        self.driver.get("https://weibo.com/")
+        self.driver.find_element_by_class_name("qrcode_phone").click()
+        time.sleep(1)
+        self.driver.find_element_by_xpath("//div[@node-type = 'mobile_box']/input[@name = 'username']").send_keys(phone_num)
+        self.driver.find_element_by_xpath("//div[@node-type = 'activation_box']/input[@name = 'password']").send_keys(v_code)
+        self.driver.find_elements_by_class_name("W_btn_a")[1].click()
+
+        return self.driver.get_cookies()
+    def get_cookie(self):
+        res = requests.get("http://api.360yzm.com/user.do!loginIn?uname=lvziqiao&pwd=wwweee6981228.&author_uid=23801")
+        print(res.text)
+        pass
+if __name__ == "__main__":
+
+    # op.get_cookie()
+    # operator = WBoperator()
+    # operator.login("13768336719", "666666777777")
+    # operator.delete(1900)
+    # op = WBoperator()
+    # co = op.login("18244808530", "wwweee6981228.")
+    # print(co)
+    # pickle.dump(co, open("./co_182", "wb"))
+    header = {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Encoding": "gzip,deflate,br",
+        "Accept-Language": "zh-CN,zh;q=0.8",
+        "Connection": "keep-alive",
+        "Host": "weibo.com",
+        "Referer": "https://weibo.com/",
+        "Upgrade-Insecure - Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36",
+    }
+    co = pickle.load(open("./co_182", "rb"))
+    cookie = ""
+    for c in co:
+        cookie = "%s;%s=%s" % (cookie, c["name"], c["value"])
+    header["Cookie"] = cookie[1:]# 去掉首个分号
+    print(json.dumps(co, indent=2))
+
+    print(requests.get("https://weibo.com/u/6434349828/home", headers=header).text)
 #  15151892433,ZSMuYu104104
 
-operator=WBoperator()
-operator.login('15850782585', 'Weibo6981228.')
-
 # operator=WBoperator()
-# operator.login('15151892433', 'ZSMuYu104104.')
-for i in range(41)[39:]:
-    page=i+1# 页码
-     
-    uid_list_unf=operator.get_followlist_unf('2622535523', page)
-    operator.follow_uidlist(uid_list_unf)
-    print u'第'+str(page)+u'页关注完毕！'
+# operator.login('15850782585', 'Weibo6981228.')
+#
+
+# for i in range(41)[39:]:
+#     page=i+1# 页码
+#
+#     uid_list_unf=operator.get_followlist_unf('2622535523', page)
+#     operator.follow_uidlist(uid_list_unf)
+#     print u'第'+str(page)+u'页关注完毕！'
 
 # operator.delete(2)
 # path_list=[]
