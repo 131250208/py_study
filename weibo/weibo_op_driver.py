@@ -14,6 +14,8 @@ import time
 import pickle
 import requests
 import json
+from weibo.weibo_database import DBManager
+from weibo.weibo_op import WeiboOpWithCoocie
 
 class WBoperator:
 #     driver = webdriver.PhantomJS(service_args=['--remote-debugger-port=9001'])# chrome浏览器驱动
@@ -39,9 +41,9 @@ class WBoperator:
         bt_change=self.driver.find_element_by_css_selector('img[action-type="btn_change_verifycode"]')# 验证码图片，点击切换
         bt_logoin=self.driver.find_element_by_class_name('login_btn')# 登录按钮
         while self.isVerifyCodeExist():
-            print u'请输入验证码……'
+            print(u'请输入验证码……')
             # 截屏以便手动输入验证码
-            verifycode=raw_input()
+            verifycode = input()
             if verifycode=='OVER':
                 break
 
@@ -49,8 +51,10 @@ class WBoperator:
     
     # 打开微博首页进行登录的过程
     def login(self,account,password):
-        
-        url='http://weibo.com/'
+
+        self.driver.delete_all_cookies()
+        time.sleep(1)
+        url='http://weibo.com/login.php'
         self.driver.get(url)
         
         # 输入账号密码并登录
@@ -79,7 +83,7 @@ class WBoperator:
         # str_script=scripts[-1].get_attribute('innerHTML')
         #
         # compile=re.compile('\[\'uid\'\]=\'[0-9]*\'')# 正则匹配的表达式
-        # print str_script
+        # print(str_script)
         # uid_str=re.search(compile, str_script).group()# 匹配结果['uid']='6219737121'
         # uid=uid_str.split('=')[1][1:-1]
         #
@@ -159,11 +163,11 @@ class WBoperator:
                 title=self.wait.until(lambda x:x.find_element_by_class_name('W_layer_title'))
                 title_txt=title.get_attribute('innerHTML')
                 if title_txt==u'关注成功':
-                    print u'关注用户：'+uid+u' 成功！'
+                    print(u'关注用户：'+uid+u' 成功！')
                 elif title_txt==u'请输入验证码':
-                    print u'需要输入验证码，等待120s……'
+                    print(u'需要输入验证码，等待120s……')
                     time.sleep(120)# 休息两分钟再试一次
-                    print u'等待结束，重试'
+                    print(u'等待结束，重试')
                     self.follow(uid)
             except:
                 pass
@@ -182,7 +186,7 @@ class WBoperator:
     #                 if str_frship=='1:0' or str_frship=='1:1' :# 如果是已关注或者互相关注的用户，则跳过
     #                     continue
     #             else:
-    #                 print 'api error'
+    #                 print('api error')
         
             # 是未关注用户，则关注
             self.follow(uid)
@@ -211,7 +215,7 @@ class WBoperator:
 #                 if str_frship=='0:0' or str_frship=='0:1' :# 如果是没有关注过的，则跳过
 #                     continue
 #             else:
-#                 print 'api error'
+#                 print('api error')
             # 是已关注的用户，则取消关注
             self.unfollow(uid)
             
@@ -251,38 +255,73 @@ class WBoperator:
         self.driver.find_elements_by_class_name("W_btn_a")[1].click()
 
         return self.driver.get_cookies()
-    def get_cookie(self):
-        res = requests.get("http://api.360yzm.com/user.do!loginIn?uname=lvziqiao&pwd=wwweee6981228.&author_uid=23801")
-        print(res.text)
-        pass
+
+    def get_cookies(self, accounts_file_path, level):
+        f = open(accounts_file_path, "r")
+        db = DBManager()
+        wbop_cookie = WeiboOpWithCoocie()
+        for line in f:
+            line = line.strip()
+            match_ob = re.match("([0-9]+)----(.*)", line)
+            username = match_ob.group(1)
+            password = match_ob.group(2)
+
+            if db.count(username) == 0:
+                print("%s %s" % (username, password))
+                cookies = self.login(username, password)
+                cookies_js = json.dumps(cookies)
+                db.insert_account(cookies_js, username, password, level, wbop_cookie.get_uid(cookies))
+
+        db.db_close()
+
+    def update_cookies(self, level):
+        wbop = WeiboOpWithCoocie()
+
+        db = DBManager()
+        accounts = db.get_accounts(3)
+        for account in accounts:
+            cookies = json.loads(account[0])
+            uid = account[1]
+            username = account[2]
+            password = account[3]
+            while wbop.home(uid, cookies) is False:
+                print("%s %s" % (username, password))
+                cookies = self.login(username, password)
+                
+            db.update_cookies(json.dumps(cookies), username)
+
+        db.db_close()
+
 if __name__ == "__main__":
 
     # op.get_cookie()
     # operator = WBoperator()
     # operator.login("13768336719", "666666777777")
     # operator.delete(1900)
-    # op = WBoperator()
+    op = WBoperator()
+    op.update_cookies(3)
     # co = op.login("18244808530", "wwweee6981228.")
     # print(co)
     # pickle.dump(co, open("./co_182", "wb"))
-    header = {
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-        "Accept-Encoding": "gzip,deflate,br",
-        "Accept-Language": "zh-CN,zh;q=0.8",
-        "Connection": "keep-alive",
-        "Host": "weibo.com",
-        "Referer": "https://weibo.com/",
-        "Upgrade-Insecure - Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36",
-    }
-    co = pickle.load(open("./co_182", "rb"))
-    cookie = ""
-    for c in co:
-        cookie = "%s;%s=%s" % (cookie, c["name"], c["value"])
-    header["Cookie"] = cookie[1:]# 去掉首个分号
-    print(json.dumps(co, indent=2))
 
-    print(requests.get("https://weibo.com/u/6434349828/home", headers=header).text)
+    # header = {
+    #     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+    #     "Accept-Encoding": "gzip,deflate,br",
+    #     "Accept-Language": "zh-CN,zh;q=0.8",
+    #     "Connection": "keep-alive",
+    #     "Host": "weibo.com",
+    #     "Referer": "https://weibo.com/",
+    #     "Upgrade-Insecure - Requests": "1",
+    #     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36",
+    # }
+    # co = pickle.load(open("./co_182", "rb"))
+    # cookie = ""
+    # for c in co:
+    #     cookie = "%s;%s=%s" % (cookie, c["name"], c["value"])
+    # header["Cookie"] = cookie[1:]# 去掉首个分号
+    # print(json.dumps(co, indent=2))
+    #
+    # print(requests.get("https://weibo.com/u/6434349828/home", headers=header).text)
 #  15151892433,ZSMuYu104104
 
 # operator=WBoperator()
@@ -294,7 +333,7 @@ if __name__ == "__main__":
 #
 #     uid_list_unf=operator.get_followlist_unf('2622535523', page)
 #     operator.follow_uidlist(uid_list_unf)
-#     print u'第'+str(page)+u'页关注完毕！'
+#     print(u'第'+str(page)+u'页关注完毕！')
 
 # operator.delete(2)
 # path_list=[]
