@@ -40,8 +40,8 @@ class CrawlWeibo:
                 id=card['mblog']['id']
                 text=card['mblog']['text']
                 if re.search('___', text)!=None:# 用正则匹配，将博文有下划线的微博过滤出来，有下划线的是“话题微博”
-                    print '***'
-                    print u"### 话题: "+text+'\n'
+                    print('***')
+                    print(u"### 话题: "+text+'\n')
                      
                     #根据微博id获取热门评论，并输出
                     list_comments=self.getComments(id, 1)# 热门评论只需要访问第一页
@@ -65,10 +65,10 @@ class CrawlWeibo:
                             pic_url=comment['pic']['url']
                         
                         # 输出评论数据
-                        print str(count_hotcomments),': **',name_user,'**',u'  **发表于：**'+created_at,u'  **点赞：**'+str(like_counts)+u'  **来自：**'+source
-                        print text+'\n'
+                        print(str(count_hotcomments),': **',name_user,'**',u'  **发表于：**'+created_at,u'  **点赞：**'+str(like_counts)+u'  **来自：**'+source)
+                        print(text+'\n')
                         count_hotcomments=count_hotcomments+1
-                    print '***'
+                    print('***')
                      
 #实例化爬虫类并调用成员方法进行输出                     
 crawl_weibo=CrawlWeibo()
